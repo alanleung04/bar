@@ -28,9 +28,12 @@ const { disabledLegendItems, handleLegendClick, resetLegendFilter } = useLegendF
 根据图例筛选状态动态生成图表配置。
 
 **功能：**
-- 根据图例状态更新series的显示状态
+- 根据图例状态更新legend的selected配置来控制series显示/隐藏
 - 处理图表配置的生成逻辑
 - 错误处理
+
+**实现原理：**
+使用ECharts的`legend.selected`配置来控制series的显示/隐藏，这是ECharts官方推荐的方式。
 
 **使用示例：**
 ```typescript
