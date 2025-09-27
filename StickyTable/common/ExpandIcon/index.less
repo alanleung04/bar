@@ -1,0 +1,53 @@
+.expand-button {
+  display: inline-flex;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #C7C7CC;
+  margin-right: 4px;
+}
+
+.plus-icon,
+.minus-icon {
+  width: 8px;
+  height: 8px;
+  position: relative;
+}
+
+.plus-icon::before,
+.plus-icon::after,
+.minus-icon::before,
+.minus-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #C7C7CC;
+}
+
+.plus-icon::before,
+.minus-icon::before {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.plus-icon::after,
+.minus-icon::after {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+}
+
+.minus-icon::after {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.plus-icon::after {
+  transform: translateX(-50%) rotate(180deg);
+}
